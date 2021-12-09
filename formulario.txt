@@ -1,0 +1,48 @@
+#contenedor-contacto .form{
+    margin-left: 5%;
+   
+}
+#contenedor-contacto .form input, textarea{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  margin: 15px; 
+}
+#contenedor-contacto .form textarea{
+    margin-right: 25px;
+    padding-left:.5rem;
+
+}
+#contenedor-contacto .form input:focus{
+    border-color: var(--viol);
+    background-color: var(--Rop2);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--Rop1);   
+}
+#contenedor-contacto .form select{
+background-color: red;
+}
+
+#contenedor-contacto .form textarea:focus{
+    border-color: var(--viol);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--Rop1);   
+}
+
+#contenedor-contacto .form button{
+    border-radius: 10%;
+    cursor: pointer;  
+    padding: 0.375rem 0.75rem;
+    margin: 20px;
+    color: var(--textoC);
+    font-weight: bold;
+    font-family: var(--poppins);
+    font-size: 1rem;
+    background-color: #e9ecef;
+}
+#contenedor-contacto .form button:hover{
+    color: var(--texto);
+    background-color: var(--ros);
+}
