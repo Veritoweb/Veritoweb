@@ -6,9 +6,13 @@ window.onhashchange=function(){
     console.log(vista);
     let menu= document.querySelector(vista);
     tarjetas.forEach(t=>{
-        t.classList.add('hidden');
-        t.classList.remove('open')
+        t.classList.add('close');
+        t.classList.remove('open');
+      
+      
     })
-    menu.classList.remove('hidden');
+    menu.classList.remove('close');
     menu.classList.add('open');
+  
+
 }
