@@ -7,7 +7,6 @@
 }
 
 :root{
-    --roboto: 'Roboto', sans-serif;
     --poppins:'Poppins', sans-serif;
     --h1: 2rem;
     --h3: 1.13rem;
@@ -50,6 +49,9 @@ a{
     text-decoration: none;
     color: var(--texto);
 }
+.flex{
+    display: flex;
+}
 /*----------------------menu--------------------*/
 #nav{
    width: 95%;
@@ -78,10 +80,7 @@ a{
     font: 300 .75rem var(--poppins);
     color: var(--textoC);
 }
-#menu{
-    display: flex;
-    margin: 0;    
-}
+#menu{margin: 0}
 #menu li{
     width: 25%;
     height: 85px;
@@ -136,7 +135,7 @@ a{
     background-image: var(--grad);
     color: var(--bco);  
 }
-.seccion-1, .seccion-2{padding: 1.56rem;}
+.seccion-1, .seccion-2, .form, .seccion-trabajos{padding: 1.56rem;}
 .parrafo{color: var(--grisO);}
 
 /*--------Contenedor Tarjeta----------*/
@@ -204,7 +203,6 @@ display: inline;
 #contenedor-cv .seccion-1 h3{margin-left: 5px}
 
 #contenedor-cv .seccion-1 .educacion{
-    display: flex;
     flex-wrap: wrap;
     margin-top: .5rem;
 }
@@ -237,22 +235,23 @@ display: inline;
     font-size: 1rem;
     margin-right: 20px;
 }
-#contenedor-cv .seccion-1 .educacion .año::before{
-    content: 'Año';
-}
-#contenedor-cv .seccion-1 .educacion .hs::before{
-    content: 'Hs';
-}
-#contenedor-cv .seccion-2{display: flex}   
+#contenedor-cv .seccion-1 .educacion .año::before{content: 'Año'}
+#contenedor-cv .seccion-1 .educacion .hs::before{content: 'Hs'}
 #contenedor-cv .seccion-2 .programas, .idiomas{width: 50%}
 #contenedor-cv .seccion-2 i, h3{font-size: 1.13rem;}
 #contenedor-cv .seccion-2 i{color: var(--viol);}
 #contenedor-cv .seccion-2 h3{margin-left: .19rem}
 .lista-idiom li, .lista-prog li{margin-top: 1rem}
+
 [class*="valoracion"]{
     color: var(--viol);
     font-size: 1.5rem;
 }
+/*----------Contenedor Trabajos----------*/
+#contenedor-trabajos .job-1 img{width: 100%}
+#contenedor-trabajos span{margin-left: 5rem}
+
+
 /*----------Contenedor Contacto----------*/
 
 #contenedor-contacto .seccion-1 .mapa{
@@ -276,9 +275,30 @@ width: 100%;
 #contenedor-contacto .seccion-1 .lista-datos .mail::before{
     content: 'E-mail';
 }
-
-
-
+#formulario label{
+    display: none;
+}
+#formulario :is(input,textarea,button){
+    width:100%;
+    outline: none;
+    border-radius: .25rem;
+    border: .1rem solid var(--grisC);
+    padding: .25rem .5rem;
+    resize: none;
+    font: normal 1rem var(--poppins);
+}
+#formulario :is(input, textarea):focus{
+    border: .2rem solid var(--Rop1);
+}
+#formulario .nombre, .mail, .texto{padding: .7rem;}
+#formulario button{
+    color: var(--viol);
+    font-weight: 600;
+}
+#formulario button:hover{
+    background-image: var(--grad);
+    color: whitesmoke;
+}
 
 @media(min-width:600px){/*a partir de 600 se ve asi*/
     body{
@@ -337,10 +357,10 @@ width: 100%;
   /*------------menu--------------------*/  
     #nav{
         height: 85vh;
-        width: 87px;
-        margin-top: 40px;
-        margin-left: 20px;
-        z-index: 2;   
+        width: 5.44rem;
+        margin-top: 2.5rem;
+        margin-left: 1.25rem;
+        z-index: 3;   
         position: fixed; 
         border: 0;
         left: 5px;
@@ -351,10 +371,10 @@ width: 100%;
     #menu{
         display: block;
         height: 85vh;   
-        width: 87px; 
+        width: 5.44rem; 
     }
     #menu li{
-        width: 85px; 
+        width: 5.31rem; 
         height: 25%;  
         border: 1px solid transparent;
         border-image: var(--gradGris);
@@ -387,7 +407,7 @@ width: 100%;
 
 /*-----------Contenedores -------------------*/
 #contenedor-about, #contenedor-cv, #contenedor-trabajos, #contenedor-contacto{
-    width: 530px;
+    width: 33.12rem;
     height: 77vh;
     position: absolute;
     top: 2.81rem;
@@ -407,6 +427,27 @@ width: 100%;
     transform: translateX(25px);
     transition: all 1s ease-out;   
 }
+/* Scrollbar-width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /*Scrollbar- Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Scrollbar- Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  /* Scrollbar-Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 /*----------Contenedor About----------*/
 
@@ -429,6 +470,13 @@ margin-left: 17px;
 #contenedor-cv .seccion-2 i{font-size: 1.5rem}
 #contenedor-cv .seccion-2 h3{font-size: 1.2rem}
 
+/*----------Contenedor Trabajos----------*/
+#contenedor-trabajos .seccion-trabajos{
+    padding: 1rem;
+}
+#contenedor-trabajos span{
+    margin-left: 12.2rem;
+}
 /*----------Contenedor Contacto----------*/
 #contenedor-contacto .seccion-1 .lista-datos .localidad span{
     right: 2.5rem;
