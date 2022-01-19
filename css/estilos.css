@@ -80,7 +80,7 @@ a{
     font: 300 .75rem var(--poppins);
     color: var(--textoC);
 }
-#menu{margin: 0}
+
 #menu li{
     width: 25%;
     height: 85px;
@@ -89,13 +89,7 @@ a{
     border-image:linear-gradient(to bottom, var(--grisC) , var(--bco));
     border-image-slice: 1;     
 }
-#menu li a{ 
-    height: 85px;
-    text-decoration: none;
-    color: var(--texto);
-    font-family: var(--poppins);
-    font-size: 1rem; 
-}
+
 #menu li a .far, .fas{
     display:block;
     font-size: 2.2rem;
@@ -247,10 +241,19 @@ display: inline;
     color: var(--viol);
     font-size: 1.5rem;
 }
-/*----------Contenedor Trabajos----------*/
-#contenedor-trabajos .job-1 img{width: 100%}
-#contenedor-trabajos span{margin-left: 5rem}
+.valoracion-vs::before{ content: '\25cf''\25cf''\25cf''\25cf''\25cf''\25cb'; }
+.valoracion-po::before,
+.valoracion-fg::before{ content: '\25cf''\25cf''\25cf''\25cb''\25cb''\25cb'; }
+.valoracion-in::before,
+.valoracion-gt::before{ content: '\25cf''\25cf''\25cf''\25cf''\25cb''\25cb';    }
+.valoracion-he::before{ content: '\25cf''\25cf''\25cb''\25cb''\25cb''\25cb';  }
 
+/*----------Contenedor Trabajos----------*/
+.seccion-trabajos :is(img){width: 100%}
+#contenedor-trabajos span{margin-left: 7rem}
+[class*='job']{
+    margin: 1rem;
+}
 
 /*----------Contenedor Contacto----------*/
 
@@ -472,8 +475,9 @@ margin-left: 17px;
 
 /*----------Contenedor Trabajos----------*/
 #contenedor-trabajos .seccion-trabajos{
-    padding: 1rem;
+    padding: .6rem;
 }
+
 #contenedor-trabajos span{
     margin-left: 12.2rem;
 }
