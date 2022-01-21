@@ -63,7 +63,7 @@
         </div>
         <div class="seccion-1">
                        
-                <p class="parrafo" ><span>Hola, soy Veronica!.</span> Desarrolladora Web jr.con  conocimientos en diseño UX/UI. También hago desarrollos de proyectos en Wordpress.
+                <p class="parrafo" ><span>Hola, soy Veronica!.</span> Desarrolladora Web jr. con  conocimientos en diseño UX/UI. También hago desarrollos de proyectos en Wordpress.
                 Me encanta ayudarte a darle vida a tus ideas y necesidades!!</p>
   
                 <ul class="lista-datos">
@@ -237,32 +237,34 @@
         <div class="seccion-1">
             <div class="mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.4960145730374!2d-58.49684498518532!3d-34.616903665702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9da52727945%3A0x14fde0450409051b!2sBah%C3%ADa%20Blanca%201900%2C%20C1407%20CABA!5e0!3m2!1ses-419!2sar!4v1638376214150!5m2!1ses-419!2sar"  loading="lazy"></iframe>
-            </div>
-           
-                <ul class="lista-datos">
-                    <li class="localidad"><span>Monte Castro-CABA</span> </li>
-                    <li class="mail"><span>veritorotbard@gmail.com</span></li>
-                </ul>
-              
+            </div>  
+            <ul class="lista-datos">
+                <li class="localidad"><span>Monte Castro-CABA</span> </li>
+                <li class="mail"><span>veritorotbard@gmail.com</span></li>
+            </ul>          
         </div>
         <div class="cabecera">
         <h2>Formulario de Contacto</h2>
         </div>
     <div class="form">
         <form id="formulario" class="formulario" action="#" method="post">
-            <div class="nombre">
+            <div class="inp-grp">
                 <label for="nombre">Nombre y Apellido</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required>
+                <p class="input-error hidden">El nombre debe contener solo letras y espacios.</p>
             </div>
-            <div class="mail">
+            <div class="inp-grp">
                 <label for="mail">E-mail</label>
                 <input type="email" name="mail" id="mail" placeholder="E-mail" required>
+                <p class="input-error hidden">El e-mail debe contener un formato de e-mail válido.</p>
             </div>
-            <div class="texto">
+            <div class="inp-grp">
                 <label for="texto">Dejame tu  Mensaje aquí</label>
                 <textarea name="texto" id="texto" placeholder="Dejame tu Mensaje aquí" rows="8"></textarea>
+                <p class="input-error hidden">El mensaje no puede quedar vacío</p>
             </div>
             <button>Enviar</button>
+            <p class="form-enviado hidden">El formulario se ha enviado correctamente</p>
         </form>
     </div>
     </section>
