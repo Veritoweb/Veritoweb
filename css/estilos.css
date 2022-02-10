@@ -147,15 +147,21 @@ a{
 #info h1{
     font: 800 var(--h1) var(--poppins);
     text-align: center;
+    line-height: 1rem;
 }
 #info h3{
     font: 300 var(--h3) var(--poppins);
     text-align: center;
     color: var(--textoC);
-    margin: 1rem; 
+    margin: .5rem; 
     display: block;
 }
-
+.git{
+    margin-left: 9.98rem;
+}
+.github{
+    width: 2.3rem;
+}
 /*----------Contenedor about----------------*/
 
 #contenedor-about .seccion-1 .parrafo{color:var(--grisO);}
@@ -424,8 +430,10 @@ width: 100%;
     border: .5px solid var(--grisC);
 }
 #foto{ margin-bottom: -15%}
-#info{margin-top: 3rem;}
-
+#info{margin-top: 4rem;}
+.git{
+    margin-left: 15rem;
+}
 /*-----------Contenedores -------------------*/
 #contenedor-about, #contenedor-cv, #contenedor-trabajos, #contenedor-contacto{
     width: 33.12rem;
